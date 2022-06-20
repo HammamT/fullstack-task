@@ -1,0 +1,10 @@
+<h2>{{in_question_categorie_name}}/Questions</h2>
+<ul class="questions">
+  <li *ngFor="let question of questions">
+    <!-- https://stackoverflow.com/questions/51751493/what-does-class-selected-do explain the use of class.selected (apply the css) -->
+    <button [class.selected]="question === selectedQuestion" type="button" (click)="onSelect(question)">
+      <span class="id">Q-id: {{question.id}}, </span>
+      <span class="content">{{question.content}}</span>
+    </button>
+  </li>
+</ul>

@@ -1,0 +1,16 @@
+<h2>My Categoriees</h2>
+<ul class="categories">
+  <li *ngFor="let categorie of categories">
+    <button [class.selected]="categorie === selectedCategorie"
+            type="button"
+            (click)="getAllCategories()"
+            >
+      <span class="name">{{categorie.name}}</span><br>
+      <span class="badge">{{categorie.descreption}}</span>
+    </button>
+  </li>
+</ul>
+<button (click)="createCategoty()">create</button>
+<button (click)="deleteCategory()">delete</button>
+<button (click)="updateCategory()">update</button>
+
