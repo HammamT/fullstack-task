@@ -12,7 +12,7 @@ export class CategoryListComponent implements OnInit {
   categories?: Category[];
   newCategory?: Category;
   selectedCategorie?: Category;
-  testCategory?: Category;
+  testCategory?: Category; 
 
   constructor(private categoryService: CategoryServiceService) {}
 
